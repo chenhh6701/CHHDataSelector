@@ -15,6 +15,8 @@
 		CE1E16791F273BA700FC4EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1E16771F273BA700FC4EDA /* LaunchScreen.storyboard */; };
 		CE1E16821F273BE400FC4EDA /* CHHDataSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1E16811F273BE400FC4EDA /* CHHDataSelector.m */; };
 		CE1E16841F273C7500FC4EDA /* CHHDataPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1E16831F273C7500FC4EDA /* CHHDataPickerView.xib */; };
+		CE49387E1F28281600B327C0 /* CHHLocationDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE49387D1F28281600B327C0 /* CHHLocationDatePicker.m */; };
+		CE4938801F282D5900B327C0 /* CHHLocationDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE49387F1F282D5900B327C0 /* CHHLocationDatePicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		CE1E16801F273BE400FC4EDA /* CHHDataSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHDataSelector.h; sourceTree = "<group>"; };
 		CE1E16811F273BE400FC4EDA /* CHHDataSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHDataSelector.m; sourceTree = "<group>"; };
 		CE1E16831F273C7500FC4EDA /* CHHDataPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHHDataPickerView.xib; sourceTree = "<group>"; };
+		CE49387C1F28281600B327C0 /* CHHLocationDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHLocationDatePicker.h; sourceTree = "<group>"; };
+		CE49387D1F28281600B327C0 /* CHHLocationDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHLocationDatePicker.m; sourceTree = "<group>"; };
+		CE49387F1F282D5900B327C0 /* CHHLocationDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHHLocationDatePicker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		CE1E16681F273BA700FC4EDA /* CHHDataSelector */ = {
 			isa = PBXGroup;
 			children = (
+				CE49387F1F282D5900B327C0 /* CHHLocationDatePicker.xib */,
 				CE1E166C1F273BA700FC4EDA /* AppDelegate.h */,
 				CE1E166D1F273BA700FC4EDA /* AppDelegate.m */,
 				CE1E166F1F273BA700FC4EDA /* ViewController.h */,
@@ -75,6 +81,8 @@
 				CE1E16801F273BE400FC4EDA /* CHHDataSelector.h */,
 				CE1E16811F273BE400FC4EDA /* CHHDataSelector.m */,
 				CE1E16831F273C7500FC4EDA /* CHHDataPickerView.xib */,
+				CE49387C1F28281600B327C0 /* CHHLocationDatePicker.h */,
+				CE49387D1F28281600B327C0 /* CHHLocationDatePicker.m */,
 			);
 			path = CHHDataSelector;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1E16841F273C7500FC4EDA /* CHHDataPickerView.xib in Resources */,
+				CE4938801F282D5900B327C0 /* CHHLocationDatePicker.xib in Resources */,
 				CE1E16791F273BA700FC4EDA /* LaunchScreen.storyboard in Resources */,
 				CE1E16761F273BA700FC4EDA /* Assets.xcassets in Resources */,
 				CE1E16741F273BA700FC4EDA /* Main.storyboard in Resources */,
@@ -160,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1E16711F273BA700FC4EDA /* ViewController.m in Sources */,
+				CE49387E1F28281600B327C0 /* CHHLocationDatePicker.m in Sources */,
 				CE1E166E1F273BA700FC4EDA /* AppDelegate.m in Sources */,
 				CE1E16821F273BE400FC4EDA /* CHHDataSelector.m in Sources */,
 				CE1E166B1F273BA700FC4EDA /* main.m in Sources */,
@@ -319,6 +329,7 @@
 				CE1E167F1F273BA700FC4EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

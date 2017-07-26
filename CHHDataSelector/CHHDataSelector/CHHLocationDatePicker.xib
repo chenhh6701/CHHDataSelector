@@ -9,7 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHHDataSelector"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHHLocationDatePicker">
+            <connections>
+                <outlet property="mDatePicker" destination="8xk-tH-gxG" id="Nsu-4j-aRa"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="366" height="305"/>
@@ -32,7 +36,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMe-Kr-bTA" userLabel="verticalCutLine">
-                    <rect key="frame" x="182.5" y="251" width="1" height="35"/>
+                    <rect key="frame" x="183" y="251" width="1" height="35"/>
                     <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="99i-O0-N4L"/>
@@ -46,26 +50,34 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="DWF-Bh-kSA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIL-Pv-8Pq">
-                    <rect key="frame" x="183" y="251" width="175" height="40"/>
+                    <rect key="frame" x="184" y="251" width="174" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="确定"/>
+                    <state key="normal" title="确认"/>
+                    <connections>
+                        <action selector="affirmAction:" destination="-1" eventType="touchUpInside" id="EfY-Rj-QIU"/>
+                    </connections>
                 </button>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8xk-tH-gxG">
-                    <rect key="frame" x="8" y="50" width="350" height="200"/>
+                <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8xk-tH-gxG">
+                    <rect key="frame" x="8" y="42" width="350" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="rZR-Xw-R7e"/>
                     </constraints>
                     <date key="date" timeIntervalSinceReferenceDate="522725270.92224902">
                         <!--2017-07-26 01:27:50 +0000-->
                     </date>
+                    <locale key="locale" localeIdentifier="zh"/>
                 </datePicker>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mJM-Ai-YpF" firstAttribute="top" secondItem="8xk-tH-gxG" secondAttribute="bottom" id="9kv-JF-f5X"/>
                 <constraint firstItem="8xk-tH-gxG" firstAttribute="top" secondItem="INw-6I-6r5" secondAttribute="bottom" id="BBh-xZ-oaI"/>
+                <constraint firstItem="FMe-Kr-bTA" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="CwO-KB-xN2"/>
                 <constraint firstItem="5mH-j4-Xm0" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="IE9-mJ-IdY"/>
                 <constraint firstItem="FMe-Kr-bTA" firstAttribute="leading" secondItem="5mH-j4-Xm0" secondAttribute="trailing" id="JKt-gR-Zpo"/>
                 <constraint firstItem="INw-6I-6r5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ku2-Xx-UL8"/>
@@ -73,15 +85,14 @@
                 <constraint firstItem="INw-6I-6r5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XRl-aZ-vmY"/>
                 <constraint firstItem="EIL-Pv-8Pq" firstAttribute="leading" secondItem="FMe-Kr-bTA" secondAttribute="trailing" id="ZTu-Q3-Ehf"/>
                 <constraint firstAttribute="trailing" secondItem="INw-6I-6r5" secondAttribute="trailing" id="bst-4r-bq4"/>
+                <constraint firstItem="EIL-Pv-8Pq" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="fEr-yn-XeM"/>
                 <constraint firstAttribute="trailing" secondItem="8xk-tH-gxG" secondAttribute="trailing" constant="8" id="hjl-Ab-kwM"/>
-                <constraint firstItem="EIL-Pv-8Pq" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="iHK-54-W07"/>
                 <constraint firstAttribute="trailing" secondItem="EIL-Pv-8Pq" secondAttribute="trailing" constant="8" id="ipT-MT-rF9"/>
                 <constraint firstItem="5mH-j4-Xm0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lJk-zt-EZO"/>
                 <constraint firstItem="8xk-tH-gxG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nyO-ii-VH9"/>
                 <constraint firstAttribute="trailing" secondItem="mJM-Ai-YpF" secondAttribute="trailing" constant="8" id="pvG-gz-xIP"/>
                 <constraint firstItem="5mH-j4-Xm0" firstAttribute="height" secondItem="EIL-Pv-8Pq" secondAttribute="height" id="rD7-We-rDa"/>
                 <constraint firstItem="mJM-Ai-YpF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="uRM-vF-UG7"/>
-                <constraint firstItem="FMe-Kr-bTA" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="wq5-YE-1sX"/>
                 <constraint firstItem="EIL-Pv-8Pq" firstAttribute="top" secondItem="mJM-Ai-YpF" secondAttribute="bottom" id="z3c-VC-1Zl"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

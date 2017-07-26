@@ -8,10 +8,9 @@
 
 #import "CHHDataSelector.h"
 
-
-
-
 @interface CHHDataSelector ()<UIPickerViewDelegate,UIPickerViewDataSource>
+
+@property (strong,nonatomic) UIView *mDataSelectorView;
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 
@@ -50,9 +49,28 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _mDataSelectorView = [[[NSBundle mainBundle] loadNibNamed:@"CHHDataPickerView" owner:self options:nil] firstObject];
+        [self setupDataView];
     }
     return self;
+}
+
+- (void)setupDataView {
+    self.mDataSelectorView.alpha = 0.0f;
+    //获取当前的年月日，并且初始化
+    [self getDateOfThisMonment];
+    
+    //边角弧度设置
+    [[self layer] setCornerRadius:15.0];
+    
+    self.DialogTitle.text = @"日期选择器";
+    [self.backBtn setTitle:@"后退" forState:UIControlStateNormal];
+    [self.enterBtn setTitle:@"确定" forState:UIControlStateNormal];
+    //绑定按钮事件
+    [self.backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.enterBtn addTarget:self action:@selector(enterClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.dayShouldChangeEnable= false;
 }
 
 //pickerView的懒加载
@@ -126,16 +144,11 @@
     [self.pickerView selectRow:_selectedRowYear inComponent:0 animated:YES];
     [self.pickerView selectRow:_selectedRowMonth inComponent:1 animated:YES];
     [self.pickerView selectRow:_selectedRowDay inComponent:2 animated:YES];
-    
-    
-    
-    
+
     //将目前的日期赋值给公共参数，以便外面调用
     self.year = [@(year) stringValue];
     self.month = [@(month) stringValue];
     self.day =  [@(day) stringValue];
-    
-    
 }
 /*
 

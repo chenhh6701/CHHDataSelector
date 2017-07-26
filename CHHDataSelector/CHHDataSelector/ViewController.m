@@ -6,7 +6,10 @@
 //  Copyright © 2017年 chenhh. All rights reserved.
 //
 
+
 #import "ViewController.h"
+
+#import "CHHLocationDatePicker.h"
 
 @interface ViewController ()
 
@@ -17,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+ 
+    CHHLocationDatePicker *locationDatePicker = [[CHHLocationDatePicker alloc] initWithFrame:self.view.frame];
+    
+    [self.view addSubview:locationDatePicker];
+    
 }
 
 
